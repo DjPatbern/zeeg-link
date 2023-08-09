@@ -8,7 +8,7 @@ const App: FC = () => {
       <div className="App">
         <main className="App-main">
           <MusicPlayer />
-          <p>©2023: Say I Believe - Zeeg</p>
+          <p>©2023: <span className="zeeg">Say I Believe - Zeeg</span></p>
         </main>
       </div>
     </>

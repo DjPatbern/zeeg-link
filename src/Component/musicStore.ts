@@ -7,7 +7,7 @@ export const musicStore = [
   },
   {
     id: 2,
-    store: "Apple",
+    store: "Apple Music",
     link: "https://music.apple.com/ng/album/say-i-believe-single/1699801629?app=music",
     logo: "apple",
   },
@@ -25,26 +25,27 @@ export const musicStore = [
   },
   {
     id: 5,
-    store: "Youtube",
+    store: "Audiomack",
+    link: "https://audiomack.com/heiszeeg/song/say-i-believe",
+    logo: "audiomack",
+  },
+  {
+    id: 6,
+    store: "Youtube Music",
     link: "https://music.youtube.com/browse/MPREb_okAfdgdpoMI",
     logo: "youtube",
   },
   {
-    id: 6,
+    id: 7,
     store: "Boomplay",
     link: "https://www.boomplay.com/songs/135120387?srModel=COPYLINK&srList=WEB",
     logo: "boomplay",
   },
   {
-    id: 7,
+    id: 8,
     store: "Tidal",
     link: "https://tidal.com/browse/album/307734515",
     logo: "tidal",
   },
-  {
-    id: 8,
-    store: "Audiomack",
-    link: "https://audiomack.com/heiszeeg/song/say-i-believe",
-    logo: "audiomack",
-  },
+
 ];

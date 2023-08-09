@@ -8,6 +8,8 @@ import Boomplay from "../assets/boomplay.png";
 import Deezer from "../assets/deezer.png";
 import Youtube from "../assets/youtube.png";
 import { musicStore } from "./musicStore";
+import { BsPlayFill } from "react-icons/bs";
+import { AiTwotoneShopping } from "react-icons/ai";
 
 interface ImageMap {
   [key: string]: string;
@@ -43,10 +45,10 @@ const MusicPlayer: React.FC = () => {
         {musicStore.map((store) => (
           <a
             href={store.link}
-            target="_blank"
-            rel="noreferrer" 
             key={store.id}
-            className={`${store.store === "Audiomack" && "no-border"} store-div`}
+            className={`${
+              store.store === "Tidal" && "no-border"
+            } store-div`}
           >
             <div className="logo-div">
               <img
@@ -55,10 +57,21 @@ const MusicPlayer: React.FC = () => {
                 alt={store.logo}
               />
               <div>
-               <p className={`${store.store === "Spotify" && "spot-green"}`}>{store.store}</p>
+                <p className={`${store.store === "Spotify" && "spot-green"}`}>
+                  <strong>{store.store}</strong>
+                </p>
               </div>
             </div>
-            <div className="play-btn"><span>▶</span> <span>Play</span></div>
+            <div className="play-btn">
+              <span className="btn">
+                {store.store === "iTunes" ? (
+                  <AiTwotoneShopping />
+                ) : (
+                  <BsPlayFill />
+                )}
+              </span>{" "}
+              <span>{store.store === "iTunes" ? "BUY" : "PLAY"}</span>
+            </div>
           </a>
         ))}
       </div>
