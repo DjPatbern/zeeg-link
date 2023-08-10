@@ -7,6 +7,7 @@ import AudioMack from "../assets/audiomack.png";
 import Boomplay from "../assets/boomplay.png";
 import Deezer from "../assets/deezer.png";
 import Youtube from "../assets/youtube.png";
+// import believeVideo from "../assets/believeVideo.mp4"
 import { musicStore } from "./musicStore";
 import { BsPlayFill } from "react-icons/bs";
 import { AiTwotoneShopping } from "react-icons/ai";
@@ -32,7 +33,7 @@ const MusicPlayer: React.FC = () => {
 
   return (
     <div className="md:w-1/2 bg-slate-600 py-48">
-      <iframe
+      {/* <iframe
         title="deezer-widget"
         src="https://widget.deezer.com/widget/dark/album/469850105?tracklist=false"
         height="300"
@@ -40,15 +41,30 @@ const MusicPlayer: React.FC = () => {
         width="100%"
         //  allowtransparency="true"
         allow="encrypted-media; clipboard-write"
-      ></iframe>
+      ></iframe> */}
+
+      {/* <video controls width="100%" height="300">
+        <source src={believeVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> */}
+
+      <div>
+        <iframe
+          src="https://embed.tidal.com/albums/307734515?layout=gridify"
+          height="300"
+        frameBorder="0"
+        width="100%"
+          // frameborder="0"
+          // allowfullscreen
+          
+        ></iframe>
+      </div>
       <div className="store-container">
         {musicStore.map((store) => (
           <a
             href={store.link}
             key={store.id}
-            className={`${
-              store.store === "Tidal" && "no-border"
-            } store-div`}
+            className={`${store.store === "Tidal" && "no-border"} store-div`}
           >
             <div className="logo-div">
               <img
